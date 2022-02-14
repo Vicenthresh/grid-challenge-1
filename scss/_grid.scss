@@ -1,5 +1,3 @@
-@use "sass:math";
-
 $grid-gaps: (
   "0": 0,
   "1": 10px,
@@ -35,7 +33,9 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 
 @for $i from 1 through 12 {
   @for $j from 1 through 12 {
-    @include grid($i, $j);
+    .grid-col-#{$i}-row-#{$j} {
+      @include grid($i, $j);
+    } 
   }
 
   .col-#{$i} {
