@@ -7,11 +7,9 @@
 
 body {
   font-family: 'Barlow Semi Condensed', sans-serif;
-  font-weight: 500;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  min-width: 480px;
+  height: 100vh;
+  display: grid;
+  align-items: center;
 }
 
 img {
