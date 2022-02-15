@@ -20,14 +20,12 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 @include xl {
   .container-xl {
     width: 100%;
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 0 20px;
     box-sizing: border-box;
   }
 }
-
-
 
 .row {
   display: flex;
