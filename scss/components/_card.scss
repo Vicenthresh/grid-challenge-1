@@ -22,3 +22,29 @@
       line-height: 1.6;
     }
   }
+
+  .card-daniel {
+    background-image: url(../images/bg-pattern-quotation.svg);
+    background-repeat: no-repeat;
+    background-position: right 20% top 0;
+    display: block;
+    padding: $base-padding;
+    border: $base-border-thickness solid #ddd;
+    box-shadow: $base-box-shadow;
+    border-radius: math.div($base-border-radius,2);
+  
+    .card-title {
+      font-size: $base-font-size;
+      font-weight: 600;
+    }
+
+    .card-bold-quote {
+      font-size: $font-size-lg;
+      font-weight: 600;
+    }
+
+    .card-body {
+      font-size: $base-font-size;
+      line-height: 1.6;
+    }
+  }
