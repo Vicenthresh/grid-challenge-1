@@ -5,18 +5,20 @@
     padding: $base-padding;
     border: $base-border-thickness solid #ddd;
     box-shadow: $base-box-shadow;
-    border-radius: math.div($base-border-radius,4);
+    border-radius: math.div($base-border-radius,2);
   
     .card-title {
       font-size: $base-font-size;
-      padding-bottom: $base-padding;
-      font-weight: bold;
+      font-weight: 600;
     }
+
+    .card-bold-quote {
+      font-size: $font-size-lg;
+      font-weight: 600;
+    }
+
     .card-body {
       font-size: $base-font-size;
-  
-      a {
-        text-decoration: underline;
-      }
+      line-height: 1.6;
     }
   }

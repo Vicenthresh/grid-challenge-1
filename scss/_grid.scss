@@ -18,6 +18,7 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 .row {
   display: flex;
   flex-flow: row wrap;
+  align-items: center;
 }
 
 @mixin grid($n-col: 1, $n-row: 1){
@@ -32,18 +33,90 @@ $layout-values: flex-start, flex-end, center, space-between, space-around;
 }
 
 @for $i from 1 through 12 {
+
+    // col and row classes
+  @include xs {
+
+      @for $j from 1 through 12 {
+        .grid-col-#{$i}-row-#{$j}-xs {
+          @include grid($i, $j);
+        } 
+      }
+
+      .col-#{$i}-xs {
+        grid-column: span ($i);
+      }
+
+      .row-#{$i}-xs {
+        grid-row: span ($i);
+      }
+  }
+
+    @include sm {
+
+      @for $j from 1 through 12 {
+        .grid-col-#{$i}-row-#{$j}-sm {
+          @include grid($i, $j);
+        } 
+      }
+
+      .col-#{$i}-sm {
+        grid-column: span ($i);
+      }
+
+      .row-#{$i}-sm {
+        grid-row: span ($i);
+      }
+  }
+
+  @include md {
+
+    @for $j from 1 through 12 {
+      .grid-col-#{$i}-row-#{$j}-md {
+        @include grid($i, $j);
+      } 
+    }
+
+    .col-#{$i}-md {
+      grid-column: span ($i);
+    }
+
+    .row-#{$i}-md {
+      grid-row: span ($i);
+    }
+}
+
+@include lg {
+
   @for $j from 1 through 12 {
-    .grid-col-#{$i}-row-#{$j} {
+    .grid-col-#{$i}-row-#{$j}-lg {
       @include grid($i, $j);
     } 
   }
 
-  .col-#{$i} {
+  .col-#{$i}-lg {
     grid-column: span ($i);
   }
 
-  .row-#{$i} {
+  .row-#{$i}-lg {
     grid-row: span ($i);
+  }
+}
+
+  @include xl {
+
+      @for $j from 1 through 12 {
+        .grid-col-#{$i}-row-#{$j}-xl {
+          @include grid($i, $j);
+        } 
+      }
+      .col-#{$i}-xl {
+        grid-column: span ($i);
+      }
+
+      .row-#{$i}-xl {
+        grid-row: span ($i);
+      }
   }
 }
 
